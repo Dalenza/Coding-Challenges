@@ -16,13 +16,34 @@ form {
 form .field {
   display: flex;
   align-items: center;
+  overflow-y: hidden;
 }
-form input {
+
+.field input {
   margin: 0 16px;
   font-size: 0.8em;
   border: 2px solid #777;
   border-radius: 4px;
   padding: 4px;
+  outline: none;
+}
+
+.field span {
+  transform: translateY(300%);
+  transition: 0.3s ease;
 }
 
 /* solution styles */
+
+input.invalid {
+  border-color: rgb(156, 23, 23);
+}
+
+input.valid {
+  border-color: rgb(94, 201, 80);
+}
+
+span.valid {
+  transform: translateY(0);
+  color: rgb(94, 201, 80);
+}
